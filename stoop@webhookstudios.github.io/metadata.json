@@ -1,0 +1,10 @@
+{
+  "uuid": "stoop@webhookstudios.github.io",
+  "name": "Stoop",
+  "description": "Restyle the lock screen: its own wallpaper, blur and tint, clock position, size and font, date, password prompt, and ready-made presets.",
+  "version-name": "1.0.0",
+  "shell-version": ["50"],
+  "session-modes": ["user", "unlock-dialog"],
+  "settings-schema": "org.gnome.shell.extensions.stoop",
+  "url": "https://github.com/webhookstudios/stoop"
+}

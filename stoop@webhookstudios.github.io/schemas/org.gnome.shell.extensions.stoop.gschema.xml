@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.stoop"
+          path="/org/gnome/shell/extensions/stoop/">
+
+    <!-- General (never part of a preset) -->
+    <key name="enabled" type="b">
+      <default><![CDATA[true]]></default>
+      <summary>Let Stoop restyle the lock screen</summary>
+    </key>
+    <key name="current-preset" type="s">
+      <default><![CDATA['default']]></default>
+      <summary>Id of the preset applied last</summary>
+    </key>
+    <key name="user-presets" type="s">
+      <default><![CDATA['{}']]></default>
+      <summary>Presets saved by the user, as JSON</summary>
+    </key>
+    <key name="wallpaper-source" type="s">
+      <default><![CDATA['desktop']]></default>
+      <choices><choice value="desktop"/><choice value="image"/><choice value="color"/></choices>
+      <summary>Where the lock screen background comes from</summary>
+    </key>
+    <key name="wallpaper-path" type="s">
+      <default><![CDATA['']]></default>
+      <summary>Image file used when the source is image</summary>
+    </key>
+    <key name="wallpaper-color" type="s">
+      <default><![CDATA['#1d1d20']]></default>
+      <summary>Color used when the source is color</summary>
+    </key>
+    <key name="message-text" type="s">
+      <default><![CDATA['']]></default>
+      <summary>A line of your own shown under the date</summary>
+    </key>
+    <key name="space-to-unlock" type="b">
+      <default><![CDATA[false]]></default>
+      <summary>Stay on the clock screen until Space or Enter is pressed</summary>
+    </key>
+
+    <!-- Background -->
+    <key name="blur" type="i">
+      <default><![CDATA[90]]></default>
+      <range min="0" max="200"/>
+      <summary>How much the background is blurred</summary>
+    </key>
+    <key name="brightness" type="d">
+      <default><![CDATA[0.65]]></default>
+      <range min="0.1" max="1.0"/>
+      <summary>Background brightness</summary>
+    </key>
+    <key name="tint-color" type="s">
+      <default><![CDATA['#000000']]></default>
+      <summary>Color laid over the background</summary>
+    </key>
+    <key name="tint-opacity" type="d">
+      <default><![CDATA[0.0]]></default>
+      <range min="0.0" max="0.95"/>
+      <summary>Strength of that color</summary>
+    </key>
+    <key name="shade" type="d">
+      <default><![CDATA[0.0]]></default>
+      <range min="0.0" max="1.0"/>
+      <summary>Darkening towards the bottom edge</summary>
+    </key>
+
+    <!-- Clock -->
+    <key name="show-clock" type="b">
+      <default><![CDATA[true]]></default>
+      <summary>Show the time</summary>
+    </key>
+    <key name="clock-position" type="s">
+      <default><![CDATA['center']]></default>
+      <choices><choice value="center"/><choice value="top"/><choice value="bottom"/><choice value="left"/><choice value="right"/><choice value="top-left"/><choice value="top-right"/><choice value="bottom-left"/><choice value="bottom-right"/></choices>
+      <summary>Where the clock sits on the screen</summary>
+    </key>
+    <key name="clock-style" type="s">
+      <default><![CDATA['inline']]></default>
+      <choices><choice value="inline"/><choice value="stacked"/></choices>
+      <summary>Hours and minutes side by side, or stacked</summary>
+    </key>
+    <key name="clock-format" type="s">
+      <default><![CDATA['system']]></default>
+      <choices><choice value="system"/><choice value="24h"/><choice value="12h"/></choices>
+      <summary>12 or 24 hour time</summary>
+    </key>
+    <key name="clock-seconds" type="b">
+      <default><![CDATA[false]]></default>
+      <summary>Show seconds</summary>
+    </key>
+    <key name="clock-size" type="i">
+      <default><![CDATA[96]]></default>
+      <range min="24" max="420"/>
+      <summary>Clock text size in pixels</summary>
+    </key>
+    <key name="clock-weight" type="i">
+      <default><![CDATA[400]]></default>
+      <range min="100" max="900"/>
+      <summary>Clock font weight</summary>
+    </key>
+    <key name="clock-font" type="s">
+      <default><![CDATA['']]></default>
+      <summary>Clock font family, empty for the system font</summary>
+    </key>
+    <key name="clock-color" type="s">
+      <default><![CDATA['#f2f2f2']]></default>
+      <summary>Clock and date color</summary>
+    </key>
+    <key name="clock-opacity" type="d">
+      <default><![CDATA[1.0]]></default>
+      <range min="0.1" max="1.0"/>
+      <summary>Clock and date opacity</summary>
+    </key>
+    <key name="clock-shadow" type="b">
+      <default><![CDATA[false]]></default>
+      <summary>Soft shadow behind the text</summary>
+    </key>
+    <key name="clock-margin" type="i">
+      <default><![CDATA[64]]></default>
+      <range min="0" max="400"/>
+      <summary>Distance from the screen edges in pixels</summary>
+    </key>
+    <key name="keep-clock" type="b">
+      <default><![CDATA[false]]></default>
+      <summary>Keep the clock visible while the password is typed</summary>
+    </key>
+
+    <!-- Date and text -->
+    <key name="show-date" type="b">
+      <default><![CDATA[true]]></default>
+      <summary>Show the date</summary>
+    </key>
+    <key name="date-format" type="s">
+      <default><![CDATA['long']]></default>
+      <choices><choice value="long"/><choice value="short"/><choice value="full"/><choice value="numeric"/><choice value="custom"/></choices>
+      <summary>How the date is written</summary>
+    </key>
+    <key name="date-custom" type="s">
+      <default><![CDATA['%A, %-d %B']]></default>
+      <summary>Custom date format, in strftime style</summary>
+    </key>
+    <key name="date-size" type="i">
+      <default><![CDATA[27]]></default>
+      <range min="8" max="160"/>
+      <summary>Date text size in pixels</summary>
+    </key>
+    <key name="date-weight" type="i">
+      <default><![CDATA[400]]></default>
+      <range min="100" max="900"/>
+      <summary>Date font weight</summary>
+    </key>
+    <key name="date-above" type="b">
+      <default><![CDATA[false]]></default>
+      <summary>Put the date above the time</summary>
+    </key>
+    <key name="date-uppercase" type="b">
+      <default><![CDATA[false]]></default>
+      <summary>Write the date in capitals</summary>
+    </key>
+    <key name="message-size" type="i">
+      <default><![CDATA[18]]></default>
+      <range min="8" max="96"/>
+      <summary>Size of your own line of text in pixels</summary>
+    </key>
+    <key name="show-hint" type="b">
+      <default><![CDATA[true]]></default>
+      <summary>Show the unlock hint</summary>
+    </key>
+
+    <!-- Password prompt -->
+    <key name="show-avatar" type="b">
+      <default><![CDATA[true]]></default>
+      <summary>Show your picture</summary>
+    </key>
+    <key name="avatar-size" type="i">
+      <default><![CDATA[160]]></default>
+      <range min="48" max="320"/>
+      <summary>Picture size in pixels</summary>
+    </key>
+    <key name="show-username" type="b">
+      <default><![CDATA[true]]></default>
+      <summary>Show your name</summary>
+    </key>
+    <key name="entry-radius" type="i">
+      <default><![CDATA[8]]></default>
+      <range min="0" max="40"/>
+      <summary>Corner radius of the password field</summary>
+    </key>
+    <key name="entry-color" type="s">
+      <default><![CDATA['#f2f2f2']]></default>
+      <summary>Color of the password field</summary>
+    </key>
+    <key name="entry-opacity" type="d">
+      <default><![CDATA[0.1]]></default>
+      <range min="0.0" max="1.0"/>
+      <summary>Opacity of the password field</summary>
+    </key>
+    <key name="entry-text-color" type="s">
+      <default><![CDATA['#f2f2f2']]></default>
+      <summary>Text color in the password field</summary>
+    </key>
+
+    <!-- Top bar -->
+    <key name="hide-panel" type="b">
+      <default><![CDATA[false]]></default>
+      <summary>Hide the top bar on the lock screen</summary>
+    </key>
+  </schema>
+</schemalist>
