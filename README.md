@@ -2,6 +2,22 @@
 
 Restyle the GNOME lock screen. Give it its own wallpaper, move and resize the clock, change the date, the password prompt and more, or start from a ready-made preset. The settings window shows a live preview as you go.
 
+## Screenshots
+
+Presets, on the lock screen:
+
+| Default | Headline | Stacked |
+|---|---|---|
+| ![Default](docs/screenshots/lock-default.jpg) | ![Headline](docs/screenshots/lock-headline.jpg) | ![Stacked](docs/screenshots/lock-stacked.jpg) |
+| **Terminal** | **Poster** | **Warm** |
+| ![Terminal](docs/screenshots/lock-terminal.jpg) | ![Poster](docs/screenshots/lock-poster.jpg) | ![Warm](docs/screenshots/lock-warm.jpg) |
+
+The settings window, with its live preview always in view:
+
+| Presets | Clock |
+|---|---|
+| ![Presets page](docs/screenshots/settings-presets.jpg) | ![Clock page](docs/screenshots/settings-clock.jpg) |
+
 ## Requirements
 
 - GNOME Shell 50 (Ubuntu 26.04)
