@@ -42,7 +42,7 @@ install -m 644 "$ROOT/data/io.github.webhookstudios.Den.take-over.desktop" "$STA
 
 cat > "$STAGE/usr/share/doc/den/copyright" <<EOF
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Den (formerly Stoop)
+Upstream-Name: Den
 Source: https://github.com/webhookstudios/den
 
 Files: *
@@ -72,7 +72,7 @@ Section: gnome
 Priority: optional
 Homepage: https://github.com/webhookstudios/den
 Description: Restyle the GNOME lock screen
- Den (formerly Stoop) is a GNOME Shell extension that changes how the lock screen
+ Den is a GNOME Shell extension that changes how the lock screen
  looks: its own wallpaper, blur and tint, the clock's position, size and
  font, the date, the password prompt, and ready-made presets. Its settings
  window shows a live preview.

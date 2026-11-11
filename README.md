@@ -1,6 +1,6 @@
 # Den
 
-*Formerly Stoop. Part of the Sedge family of webhookstudios apps.*
+*Part of the Sedge family of webhookstudios apps.*
 
 Restyle the GNOME lock screen. Give it its own wallpaper, move and resize the clock, change the date, the password prompt and more, or start from a ready-made preset. The settings window shows a live preview as you go.
 
@@ -31,10 +31,10 @@ Den has only been tested on Ubuntu 26.04 with GNOME Shell 50.1 on Wayland.
 
 ### With the deb package (recommended)
 
-Download `den_1.1.0_all.deb` from the [latest release](https://github.com/webhookstudios/den/releases/latest), then install it:
+Download `den_1.1.1_all.deb` from the [latest release](https://github.com/webhookstudios/den/releases/latest), then install it:
 
 ```bash
-sudo apt install ./den_1.1.0_all.deb
+sudo apt install ./den_1.1.1_all.deb
 ```
 
 Log out and back in, then open **Den** from the apps menu. The first time, that turns it on and opens its settings.
