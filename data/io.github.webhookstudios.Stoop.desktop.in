@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Stoop
+Name=Den
 GenericName=Lock Screen Settings
 Comment=Change how the lock screen looks: wallpaper, clock, date and password prompt
 Exec=@EXEC@
@@ -8,4 +8,4 @@ Icon=@ICON@
 Terminal=false
 StartupNotify=false
 Categories=Settings;GNOME;GTK;
-Keywords=lock;screen;wallpaper;clock;extension;
+Keywords=stoop;sedge;lock;screen;wallpaper;clock;extension;

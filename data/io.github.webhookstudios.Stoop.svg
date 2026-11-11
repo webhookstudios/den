@@ -1,7 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-<rect x="8" y="8" width="112" height="112" rx="28" fill="#2b2d5c"/>
-<circle cx="92" cy="34" r="30" fill="#4a4fa0" opacity=".6"/>
-<path d="M46 58V46a18 18 0 0 1 36 0v12" fill="none" stroke="#f4f1ea" stroke-width="8" stroke-linecap="round"/>
-<rect x="36" y="56" width="56" height="44" rx="10" fill="#f6c453"/>
-<circle cx="64" cy="74" r="6" fill="#2b2d5c"/><rect x="61" y="76" width="6" height="14" rx="3" fill="#2b2d5c"/>
+  <defs>
+    <linearGradient id="face" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6eee8"/>
+      <stop offset="1" stop-color="#d2dfd6"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="67" r="54" fill="#1e2b26" fill-opacity=".16"/>
+  <circle cx="64" cy="63" r="54" fill="url(#face)"/>
+  <circle cx="64" cy="63" r="52.5" fill="none" stroke="#247268" stroke-width="3"/>
+  <g transform="translate(64 63) scale(2.55) translate(-12 -12)" fill="none" stroke="#247268"
+     stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 11h12v9H6z M8.5 11V8a3.5 3.5 0 0 1 7 0v3 M12 15v2"/>
+  </g>
 </svg>

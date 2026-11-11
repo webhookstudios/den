@@ -7,6 +7,7 @@ import Gtk from 'gi://Gtk';
 import Pango from 'gi://Pango';
 
 import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
+import {applyToWindow as applySedge} from './sedge/sedge.js';
 
 import {applyValues, readTyped, sanitize, snapshot, wallpaperFile} from './model.js';
 import {BUILTIN_PRESETS} from './presets.js';
@@ -259,7 +260,7 @@ function importFile(window, settings) {
             const [, bytes] = file.load_contents(null);
             const data = JSON.parse(new TextDecoder().decode(bytes));
             if (data?.format !== 'stoop-preset' || typeof data.values !== 'object')
-                throw new Error('this is not a Stoop preset');
+                throw new Error('this is not a Den preset');
             const values = sanitize(settings, data.values);
             if (Object.keys(values).length === 0)
                 throw new Error('the preset has no usable settings');
@@ -379,11 +380,11 @@ function presetsPage(window, settings) {
     yours.add(actionRow('Import a preset file', '', 'document-open-symbolic', () => importFile(window, settings)));
     yours.add(actionRow('Export the current look to a file', '', 'document-save-symbolic',
         () => exportFile(window, 'My lock screen', snapshot(settings))));
-    yours.add(actionRow('Back to the default look', 'Resets every look setting; your wallpaper stays',
+    yours.add(actionRow('Reset the look', 'Resets every look setting; your wallpaper stays',
         'edit-undo-symbolic', () => {
             applyValues(settings, {});
             settings.set_string('current-preset', 'default');
-            toast('Back to the default look');
+            toast('The look is reset');
         }));
     page.add(yours);
     return page;
@@ -733,7 +734,7 @@ function lockingPage() {
     const about = new Adw.PreferencesGroup({title: 'Good to know'});
     about.add(new Adw.ActionRow({
         title: 'The sign-in screen stays as it is',
-        subtitle: 'Stoop changes the screen you see after locking. The screen shown when the ' +
+        subtitle: 'Den changes the screen you see after locking. The screen shown when the ' +
             'computer starts belongs to the system and is not changed.',
     }));
     page.add(about);
@@ -742,6 +743,8 @@ function lockingPage() {
 
 export default class StoopPreferences extends ExtensionPreferences {
     fillPreferencesWindow(window) {
+        applySedge(window, `${this.path}/sedge`);
+        window.set_title('Den');
         const settings = this.getSettings();
         window.set_default_size(820, 940);
 

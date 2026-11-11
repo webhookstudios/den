@@ -239,7 +239,7 @@ export function drawLock(cr, width, height, get, {prompt = false} = {}) {
     if (!get('enabled')) {
         cr.setSourceRGBA(0, 0, 0, 0.6);
         cr.paint();
-        const off = textLayout(cr, 'Stoop is off', {size: 60, weight: 600});
+        const off = textLayout(cr, 'Den is off', {size: 60, weight: 600});
         cr.setSourceRGBA(1, 1, 1, 0.9);
         cr.moveTo((W - off.width) / 2, (H - off.height) / 2);
         PangoCairo.show_layout(cr, off.layout);

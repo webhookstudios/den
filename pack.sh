@@ -9,6 +9,7 @@ mkdir -p "$ROOT/dist"
 gnome-extensions pack --force --out-dir "$ROOT/dist" \
     --extra-source=model.js --extra-source=presets.js --extra-source=css.js \
     --extra-source=preview.js --extra-source=wallpapers.js \
+    --extra-source=sedge \
     "$ROOT/$UUID"
 
 echo "Built $ROOT/dist/$UUID.shell-extension.zip"

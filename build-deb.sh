@@ -24,6 +24,8 @@ install -d "$EXT" "$STAGE/DEBIAN" "$STAGE/usr/bin" \
 
 install -m 644 "$ROOT/$UUID"/*.js "$ROOT/$UUID/metadata.json" \
     "$ROOT/$UUID/stylesheet.css" "$EXT/"
+cp -r "$ROOT/$UUID/sedge" "$EXT/"
+find "$EXT/sedge" -type f -exec chmod 644 {} +
 # With no schemas folder of its own, the extension reads its schema from
 # the system one, which dpkg compiles through glib's trigger.
 install -m 644 "$ROOT/$UUID/schemas"/*.gschema.xml "$STAGE/usr/share/glib-2.0/schemas/"
@@ -35,7 +37,7 @@ chmod 644 "$STAGE/usr/share/applications/$APP_ID.desktop"
 
 cat > "$STAGE/usr/share/doc/stoop/copyright" <<EOF
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Stoop
+Upstream-Name: Den (formerly Stoop)
 Source: https://github.com/webhookstudios/stoop
 
 Files: *
@@ -43,6 +45,11 @@ Copyright: $(date +%Y) webhookstudios
 License: GPL-2+
  On Debian systems, the full text of the GNU General Public License
  version 2 can be found in /usr/share/common-licenses/GPL-2.
+
+Files: usr/share/gnome-shell/extensions/*/sedge/fonts/*
+Copyright: 2023 The Young Serif Project Authors; 2015 The Public Sans Project Authors
+License: OFL-1.1
+ The full license texts are in the extension's sedge/fonts/ folder.
 EOF
 chmod 644 "$STAGE/usr/share/doc/stoop/copyright"
 
@@ -57,12 +64,12 @@ Section: gnome
 Priority: optional
 Homepage: https://github.com/webhookstudios/stoop
 Description: Restyle the GNOME lock screen
- Stoop is a GNOME Shell extension that changes how the lock screen
+ Den (formerly Stoop) is a GNOME Shell extension that changes how the lock screen
  looks: its own wallpaper, blur and tint, the clock's position, size and
  font, the date, the password prompt, and ready-made presets. Its settings
  window shows a live preview.
  .
- After installing, log out and back in, then open Stoop from the
+ After installing, log out and back in, then open Den from the
  apps menu.
 EOF
 

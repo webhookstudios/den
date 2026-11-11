@@ -1,5 +1,5 @@
 #!/bin/sh
-# Installs Stoop for the current user, without root: the extension, plus an
+# Installs Den for the current user, without root: the extension, plus an
 # apps-menu entry that opens its settings.
 set -e
 
@@ -32,8 +32,8 @@ sed -e "s|@EXEC@|gjs -m \"$DATA/stoop/launcher.js\"|" -e "s|@ICON@|$ICON|" \
 update-desktop-database "$DATA/applications" 2>/dev/null || true
 
 cat <<EOF
-Stoop is installed in:
+Den is installed in:
   $DEST
 
-Log out and back in, then open Stoop from the apps menu.
+Log out and back in, then open Den from the apps menu.
 EOF

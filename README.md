@@ -1,4 +1,6 @@
-# Stoop
+# Den
+
+*Formerly Stoop. Part of the Sedge family of webhookstudios apps.*
 
 Restyle the GNOME lock screen. Give it its own wallpaper, move and resize the clock, change the date, the password prompt and more, or start from a ready-made preset. The settings window shows a live preview as you go.
 
@@ -23,19 +25,19 @@ The settings window, with its live preview always in view:
 - GNOME Shell 50 (Ubuntu 26.04)
 - A Wayland session, which is the Ubuntu default
 
-Stoop has only been tested on Ubuntu 26.04 with GNOME Shell 50.1 on Wayland.
+Den has only been tested on Ubuntu 26.04 with GNOME Shell 50.1 on Wayland.
 
 ## Install
 
 ### With the deb package (recommended)
 
-Download `stoop_1.0.0_all.deb` from the [latest release](https://github.com/webhookstudios/stoop/releases/latest), then install it:
+Download `stoop_1.1.0_all.deb` from the [latest release](https://github.com/webhookstudios/stoop/releases/latest), then install it:
 
 ```bash
-sudo apt install ./stoop_1.0.0_all.deb
+sudo apt install ./stoop_1.1.0_all.deb
 ```
 
-Log out and back in, then open **Stoop** from the apps menu. The first time, that turns it on and opens its settings.
+Log out and back in, then open **Den** from the apps menu. The first time, that turns it on and opens its settings.
 
 To remove it:
 
@@ -71,7 +73,7 @@ git clone https://github.com/webhookstudios/stoop.git
 
 ## Using it
 
-Open **Stoop** from the apps menu, or run:
+Open **Den** from the apps menu, or run:
 
 ```bash
 gnome-extensions prefs stoop@webhookstudios.github.io
@@ -91,8 +93,8 @@ Changes apply straight away, also to a screen that is already locked. Presets ch
 
 ## Good to know
 
-- Stoop changes the screen you see after locking. The sign-in screen shown when the computer starts belongs to the system and is not changed.
-- Everything Stoop adds to the lock screen is display only. Unlocking works exactly as before, and turning the extension off brings the standard lock screen back.
+- Den changes the screen you see after locking. The sign-in screen shown when the computer starts belongs to the system and is not changed.
+- Everything Den adds to the lock screen is display only. Unlocking works exactly as before, and turning the extension off brings the standard lock screen back.
 - The blur in the preview is an approximation; the real one is smoother.
 
 ## Development
