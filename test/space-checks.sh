@@ -4,7 +4,7 @@
 if [ -z "${DIALOG:-}" ]; then
     SHOTS="${SHOTS:-$WORK/shots}"; mkdir -p "$SHOTS"
     export GSETTINGS_SCHEMA_DIR="$ROOT/$UUID/schemas"
-    LM="org.gnome.shell.extensions.stoop"
+    LM="org.gnome.shell.extensions.den"
     set_() { gsettings set "$LM" "$@"; sleep 0.4; }
     show() { echo "== $1"; eval_js "$2"; }
     shot() { :; }

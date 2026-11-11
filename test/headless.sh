@@ -8,7 +8,7 @@
 # Needs: gnome-shell, dbus-run-session, glib-compile-schemas, gdbus.
 set -u
 
-UUID=stoop@webhookstudios.github.io
+UUID=den@webhookstudios.github.io
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 WORK="${WORK:-$(mktemp -d)}"
 export HOME="$WORK/home"

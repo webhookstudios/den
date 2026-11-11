@@ -31,10 +31,10 @@ Den has only been tested on Ubuntu 26.04 with GNOME Shell 50.1 on Wayland.
 
 ### With the deb package (recommended)
 
-Download `stoop_1.1.0_all.deb` from the [latest release](https://github.com/webhookstudios/stoop/releases/latest), then install it:
+Download `den_1.1.0_all.deb` from the [latest release](https://github.com/webhookstudios/den/releases/latest), then install it:
 
 ```bash
-sudo apt install ./stoop_1.1.0_all.deb
+sudo apt install ./den_1.1.0_all.deb
 ```
 
 Log out and back in, then open **Den** from the apps menu. The first time, that turns it on and opens its settings.
@@ -42,33 +42,33 @@ Log out and back in, then open **Den** from the apps menu. The first time, that 
 To remove it:
 
 ```bash
-sudo apt remove stoop
+sudo apt remove den
 ```
 
 ### As an extension zip, without root
 
 ```bash
-wget https://github.com/webhookstudios/stoop/releases/latest/download/stoop@webhookstudios.github.io.shell-extension.zip
+wget https://github.com/webhookstudios/den/releases/latest/download/den@webhookstudios.github.io.shell-extension.zip
 ```
 
 ```bash
-gnome-extensions install --force stoop@webhookstudios.github.io.shell-extension.zip
+gnome-extensions install --force den@webhookstudios.github.io.shell-extension.zip
 ```
 
 Log out and back in, then:
 
 ```bash
-gnome-extensions enable stoop@webhookstudios.github.io
+gnome-extensions enable den@webhookstudios.github.io
 ```
 
 ### From source
 
 ```bash
-git clone https://github.com/webhookstudios/stoop.git
+git clone https://github.com/webhookstudios/den.git
 ```
 
 ```bash
-./stoop/install.sh
+./den/install.sh
 ```
 
 ## Using it
@@ -76,7 +76,7 @@ git clone https://github.com/webhookstudios/stoop.git
 Open **Den** from the apps menu, or run:
 
 ```bash
-gnome-extensions prefs stoop@webhookstudios.github.io
+gnome-extensions prefs den@webhookstudios.github.io
 ```
 
 The preview at the top stays in view on every page. Switch it between **Clock** and **Password** to see both states of the lock screen, and press **Lock now** to see the real thing.
@@ -100,11 +100,11 @@ Changes apply straight away, also to a screen that is already locked. Presets ch
 ## Development
 
 ```bash
-ln -s "$PWD/stoop@webhookstudios.github.io" ~/.local/share/gnome-shell/extensions/
+ln -s "$PWD/den@webhookstudios.github.io" ~/.local/share/gnome-shell/extensions/
 ```
 
 ```bash
-glib-compile-schemas stoop@webhookstudios.github.io/schemas
+glib-compile-schemas den@webhookstudios.github.io/schemas
 ```
 
 A Wayland session cannot reload extension code, so each change needs a logout. To try changes without that, `test/headless.sh` starts a separate, invisible GNOME Shell with a throwaway home folder, locks it, applies every preset and saves screenshots.

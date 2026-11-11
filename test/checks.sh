@@ -4,7 +4,7 @@
 SHOTS="${SHOTS:-$WORK/shots}"
 mkdir -p "$SHOTS"
 export GSETTINGS_SCHEMA_DIR="$ROOT/$UUID/schemas"
-LM="org.gnome.shell.extensions.stoop"
+LM="org.gnome.shell.extensions.den"
 
 preset() { gjs -m "$ROOT/test/preset.mjs" "$@"; sleep 1; }
 set_() { gsettings set "$LM" "$@"; sleep 0.4; }

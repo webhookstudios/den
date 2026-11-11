@@ -256,7 +256,7 @@ export function makePreview(get, options = {}, props = {}) {
         try {
             drawLock(cr, w, h, get, options);
         } catch (e) {
-            console.error(`Stoop preview: ${e.message}`);
+            console.error(`Den preview: ${e.message}`);
         }
         cr.$dispose();
     });

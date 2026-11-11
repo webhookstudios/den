@@ -399,14 +399,14 @@ class DialogDecor {
     }
 }
 
-export default class StoopExtension extends Extension {
+export default class DenExtension extends Extension {
     enable() {
         this._settings = this.getSettings();
         this._decors = new Map();
         this._pending = new Map();
         this._cssFile = null;
         this._cssSerial = 0;
-        this._cssDir = GLib.build_filenamev([GLib.get_user_cache_dir(), 'stoop']);
+        this._cssDir = GLib.build_filenamev([GLib.get_user_cache_dir(), 'den']);
 
         this._settingsId = this._settings.connect('changed', () => this._queue());
         // The desktop wallpaper and clock format can change while locked too.
@@ -416,7 +416,7 @@ export default class StoopExtension extends Extension {
             for (const child of this._group.get_children())
                 this._adopt(child);
         } else {
-            console.warn('Stoop: this shell has no lock screen to restyle.');
+            console.warn('Den: this shell has no lock screen to restyle.');
         }
         this._sync();
     }
@@ -467,7 +467,7 @@ export default class StoopExtension extends Extension {
         try {
             callback();
         } catch (e) {
-            console.error(`Stoop: ${e.message}\n${e.stack}`);
+            console.error(`Den: ${e.message}\n${e.stack}`);
         }
     }
 

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Den setup
+Comment=Turns Den on in place of Stoop, its old name
+Exec=/usr/lib/den/den-take-over
+OnlyShowIn=GNOME;
+NoDisplay=true
+X-GNOME-Autostart-Phase=Applications

@@ -741,7 +741,7 @@ function lockingPage() {
     return page;
 }
 
-export default class StoopPreferences extends ExtensionPreferences {
+export default class DenPreferences extends ExtensionPreferences {
     fillPreferencesWindow(window) {
         applySedge(window, `${this.path}/sedge`);
         window.set_title('Den');

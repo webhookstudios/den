@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <schema id="org.gnome.shell.extensions.stoop"
+  <schema id="org.gnome.shell.extensions.den"
           path="/org/gnome/shell/extensions/stoop/">
 
     <!-- General (never part of a preset) -->
     <key name="enabled" type="b">
       <default><![CDATA[true]]></default>
-      <summary>Let Stoop restyle the lock screen</summary>
+      <summary>Let Den restyle the lock screen</summary>
     </key>
     <key name="current-preset" type="s">
       <default><![CDATA['default']]></default>
